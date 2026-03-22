@@ -4,9 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import LoginModal from "./LoginModal";
 
 export default function Header() {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const isLoggedIn = !!localStorage.getItem("token");
 
   const handleLogout = () => {
@@ -46,14 +48,19 @@ export default function Header() {
           <Link to="/recipes" onClick={() => setIsPanelOpen(false)}>Recipes</Link>
           <Link to="/messages" onClick={() => setIsPanelOpen(false)}>Messages</Link>
           {isLoggedIn
-            ? <span onClick={handleLogout}>Logout</span>
-            : <Link to="/login" onClick={() => setIsPanelOpen(false)}>Login</Link>
+          ? <span onClick={handleLogout}>Logout</span>
+          : <span onClick={() => { setIsPanelOpen(false); setIsModalOpen(true); }}>Login</span>
           }
         </nav>
-        <div className="avatar">
-          <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Avatar" />
-        </div>
+          {isLoggedIn
+          ? <div className="avatar">
+              <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Avatar" />
+            </div>
+          : <div className="spacer" />
+          }
+
       </div>
+      <LoginModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
