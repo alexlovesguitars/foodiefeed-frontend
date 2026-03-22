@@ -1,0 +1,94 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  z-index: 201;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.modal h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.modal-form input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+.modal-form input:focus {
+  border-color: #a02334;
+}
+
+.modal-submit {
+  padding: 0.75rem;
+  background: #a02334;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.modal-submit:hover {
+  background: #8a1e2c;
+}
+
+.modal-error {
+  color: #a02334;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.modal-switch {
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.modal-switch span {
+  color: #a02334;
+  cursor: pointer;
+  font-weight: 600;
+}
