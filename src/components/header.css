@@ -61,13 +61,12 @@
   margin-left: 1rem;
   margin-right: 3rem;
   font-size: 1.25rem;
-  transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .burger-menu.open {
   transform: rotate(90deg);
   opacity: 0;
-  color: #FFF5E5; /* matches your panel/background color */
   pointer-events: none;
 }
 
@@ -120,10 +119,13 @@
   font-size: 1.5rem;
   text-decoration: none;
   color: #ffffff;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .panel-nav a:hover {
   color: #dddddd;
+  border-bottom: 2px solid #dddddd;
 }
 
 .avatar {
