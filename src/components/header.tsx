@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import LoginModal from "./LoginModal";
+import LoginModal from "./loginModal";
 
 export default function Header() {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
@@ -56,7 +56,9 @@ export default function Header() {
           ? <div className="avatar">
               <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Avatar" />
             </div>
-          : <div className="spacer" />
+          : <div className="avatar-placeholder">
+              <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Avatar" />
+            </div>
           }
 
       </div>

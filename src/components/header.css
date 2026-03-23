@@ -156,3 +156,12 @@
 .panel-nav span:hover {
   color: #dddddd;
 }
+
+.avatar-placeholder {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 3rem;
+  opacity: 0;
+}
