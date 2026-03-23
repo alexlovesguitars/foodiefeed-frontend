@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "motion/react";
 import Home from "./pages/Home";
 import Explore from "./pages/Explore";
 import Profile from "./pages/Profile";
