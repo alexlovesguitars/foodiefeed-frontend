@@ -12,3 +12,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin: 5rem 20rem 5rem 20rem;
+}

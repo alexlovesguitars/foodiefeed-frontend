@@ -28,7 +28,8 @@ export default function Header() {
           <img src={FoodieFeedLogo} alt="FoodieFeed" />
         </Link>
 
-        <div className="spacer" />
+      <div className="spacer" />
+
       </div>
 
       <div className="searchbar">

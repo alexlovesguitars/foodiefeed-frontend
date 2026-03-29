@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Explore from "./pages/Explore";
 import Profile from "./pages/Profile";
 import Recipe from "./pages/Recipe";
-import Navbar from "./components/header";
+import Header from "./components/header";
 import "./App.css";
 
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
 
   return (
     <>
-      <Navbar /> {/* add it here, outside the Routes so it shows on every page */}
+      <Header /> {/* add it here, outside the Routes so it shows on every page */}
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
