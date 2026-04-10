@@ -28,7 +28,7 @@
 }
 
 .header-brand img {
-  max-width: 25rem;
+  max-width: 20rem;
 }
 
 .searchbar {
@@ -76,7 +76,7 @@
   top: 0;
   right: 0;
   height: 100vh;
-  width: 15%;
+  width: 10%;
   background:#a02334;
   z-index: 100;
   padding: 1.5rem;
@@ -165,3 +165,43 @@
   margin-bottom: 3rem;
   opacity: 0;
 }
+
+
+
+/* Small Screens */
+
+@media (max-width: 768px) {
+  .header-row {
+    grid-template-columns: auto auto;
+  }
+
+  .searchbar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .burger-menu {
+    order: 2;
+    justify-self: start;
+    margin-left: 2rem;
+  }
+
+  .header-brand {
+    order: 1;
+    justify-content: center;
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .sliding-panel {
+    width: 100%;
+  }
+
+}
+
+
+/* Medium4 Screens */
