@@ -1,4 +1,11 @@
 .home-content {
-  text-align: start;
-  padding: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .home-content {
+    text-align: end;
+    padding: 2rem;
+  }
 }
