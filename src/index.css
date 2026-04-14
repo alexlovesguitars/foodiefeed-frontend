@@ -17,5 +17,11 @@ a {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  margin: 5rem 10rem 5rem 10rem;
+  margin: 1rem;
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    margin: 5rem 10rem 5rem 10rem;
+  }
 }
